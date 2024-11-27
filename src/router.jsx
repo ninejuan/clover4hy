@@ -6,7 +6,7 @@ import Rotate from "./pages/rotate";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <Rotate />,
   },
   {
     path: "/rotate",
