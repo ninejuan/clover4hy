@@ -39,7 +39,7 @@ const LuckyClover = styled.div`
   background-position: center;
 `;
 
-const App = () => {
+const Main = () => {
   return (
     <LuckyCloverContainer>
       <LuckyCloverText>박하연을 위한 네잎클로버</LuckyCloverText>
@@ -50,4 +50,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;
