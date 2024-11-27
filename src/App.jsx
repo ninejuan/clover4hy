@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import clover from '//clover.svg'
 
 const LuckyCloverContainer = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const LuckyClover = styled.div`
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  background-image: url("/public/clover.svg");
+  background-image: url("/clover.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
