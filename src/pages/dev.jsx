@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const LuckyCloverContainer = styled.div`
   display: flex;
@@ -18,36 +18,48 @@ const LuckyCloverText = styled.div`
   margin-bottom: 20px;
 `;
 
+// 잎사귀 회전 애니메이션
+const rotateAnimation = keyframes`
+  0% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 0) rotate(360deg);
+  }
+`;
+
 const LuckyCloverWrapper = styled.div`
   position: relative;
-  width: 350px;
+  width: 300px;
   height: 600px;
 `;
 
 const LuckyCloverLeaves = styled.div`
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 300px;
-  height: 300px;
-  background-image: url("/leaves.png");
+  width: 250px;
+  height: 250px;
+  background-image: url("/leaves.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  animation: ${rotateAnimation} 5s linear infinite;
 `;
 
 const LuckyCloverStem = styled.div`
   position: absolute;
-  top: 55%;
+  top: 31%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 60px;
-  height: 250px;
-  background-image: url("/stem.png");
+  width: 20px;
+  height: 300px;
+  background-image: url("/stem.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -1;
 `;
 
 const Dev = () => {
